@@ -1,0 +1,62 @@
+<html>
+<head>
+<title>Iaas</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<style>
+* {
+  box-sizing: border-box;
+}
+	.panel{
+		padding:20px;
+		background:#77b7ef;
+		background: -moz-radial-gradient(center, ellipse cover, #77b7ef 0%, #000000 100%);
+		background: -webkit-gradient(radial, center center, 0px,center center, 100%, color-stop(0%, #77b7ef), color-stop(100%, #000000));
+		background: -webkit-radial-gradient(center,ellipse cover, #77b7ef 0%, #000000 100%);	
+		background: -o-radial-gradient(center,ellipse cover, #77b7ef 0%, #000000 100%);
+		background: -ms-radial-gradient(center,ellipse cover, #77b7ef 0%, #000000 100%);
+		background: radial-gradient(ellipse at center, #77b7ef 0%, #000000 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#77b7ef', endColorstr='#000000' , GradientType=1);
+		background-size:160% 160%;
+		background-position:center -160%;
+		}
+	
+	.panel h1{margin-top:0px;}
+	.panel h1, .panel p, .panel a{color:#fff;}
+
+</style>
+
+</head>
+<body class="panel">
+<marquee style="color:#9F9;">
+<h1><b><i><u>InfraStructure As A Service</u></i></b></h1>
+</marquee>
+<fieldset>
+<legend><b>Enter The Details</b> </legend>
+<form  action="/cgi-bin/staas.py" style="font-size:24px; color:#ffffff" method="POST">
+<h3><b><u>Fill The Details For Required Operating System</u></b></h3>
+OS Name  :  <input type="text" name="osn" size=30 style="font-family:impact, "Arial Black", sans serif; color:#fffffe ; font-size:10px;"> <br/>
+OS    :  <input type="text" placeholder="Eg: Ubuntu,Redhat,Windows10" size="39" name="os" style="font-family:impact, "Arial Black", sans serif; color:#fffffe; font-size:10px;"> <br/>
+RAM(in MB)  :  <input type="number" name="osr" size="30" required min="1024" style="font-family:impact, "Arial Black", sans serif; color:#fffffe; font-size:10px;"> <br/>
+CPU Core  :  <input type="number" size="33"  name="osc" required min="1" max="2" style="font-family:impact, "Arial Black", sans serif; color:#fffffe; font-size:10px;"> <br/>
+Hard Disk(in GB)  :  <input type="number" size="30" name="osh" required min="1" style="font-family:impact, "Arial Black", sans serif; color:#fffffe; font-size:10px;"> <br/>
+Port For VNC  :  <input type="number" size="30" name="osp" required min="5900" style="font-family:impact, "Arial Black", sans serif; color:#fffffe; font-size:10px;"> <br/>
+Port For No VNC  :  <input type="number" size="30" name="osp1" required min="0" max="65535" style="font-family:impact, "Arial Black", sans serif; color:#fffffe; font-size:10px;"> <br/>
+Launch Your Live OS  :  <input type="radio" name="ch" value="LIVE OS"  style="font-family:impact, "Arial Black", sans serif; color:#fffffe; font-size:10px;"> <br/>
+Launch Your Installed OS  :  <input type="radio" name="ch1" value="INSTALLED OS" style="font-family:impact, "Arial Black", sans serif; color:#fffffe; font-size:10px;"> <br/><br/>
+                     <input type="submit" name="s" value="Launch" style="background:#6db3f2; background:-moz-linear-gradient(top,#6db3f2 0%, #54a3ee 50%, #3690f0 51%, #1e69de 100%);display:inline-block; border:1px solid #1f84ef; padding:0px 50px; line-height:30px; border-radius:5px; background: linear-gradient(to bottom, #6db3f2 0%, #54a3ee 50%, #3690f0 51%, #1e69de 100%); text-transform:uppercase; font-family:impact, "Arial Black", sans serif; color:#fffffe; font-size:20px;font-size:1.42857rem; text-decoration:none; -webkit-font-smoothing:antialiased; text-shadow: 1px 0px 2px #1f84ef;">
+</form>
+</fieldset><br/>
+<fieldset>
+<form  action="/cgi-bin/staas.py" style="font-size:24px; color:#ffffff" method="POST">
+<h3><b><u>First Shutdown Your Running OS And Then Delete It</u></b></h3>
+Enter The OS Name You Want To Shutdown : <input type="text" placeholder="Eg: Ubuntu,Redhat" size="45" name="os" style="font-family:impact, "Arial Black", sans serif; color:#fffffe; font-size:10px;"><br/>
+                     <input type="submit" name="s" value="Shutdown" style="background:#6db3f2; background:-moz-linear-gradient(top,#6db3f2 0%, #54a3ee 50%, #3690f0 51%, #1e69de 100%);display:inline-block; border:1px solid #1f84ef; padding:0px 50px; line-height:30px; border-radius:5px; background: linear-gradient(to bottom, #6db3f2 0%, #54a3ee 50%, #3690f0 51%, #1e69de 100%); text-transform:uppercase; font-family:impact, "Arial Black", sans serif; color:#fffffe; font-size:20px;font-size:1.42857rem; text-decoration:none; -webkit-font-smoothing:antialiased; text-shadow: 1px 0px 2px #1f84ef;"> <br/><br/>
+Enter The OS Name You Want To Delete : <input type="text" placeholder="Eg: Ubuntu,Redhat" size="50" name="os" style="font-family:impact, "Arial Black", sans serif; color:#fffffe; font-size:10px;"><br/>
+                     <input type="submit" name="s" value="Delete" style="background:#6db3f2; background:-moz-linear-gradient(top,#6db3f2 0%, #54a3ee 50%, #3690f0 51%, #1e69de 100%);display:inline-block; border:1px solid #1f84ef; padding:0px 50px; line-height:30px; border-radius:5px; background: linear-gradient(to bottom, #6db3f2 0%, #54a3ee 50%, #3690f0 51%, #1e69de 100%); text-transform:uppercase; font-family:impact, "Arial Black", sans serif; color:#fffffe; font-size:20px;font-size:1.42857rem; text-decoration:none; -webkit-font-smoothing:antialiased; text-shadow: 1px 0px 2px #1f84ef;"> <br/>
+
+</form>
+</fieldset>
